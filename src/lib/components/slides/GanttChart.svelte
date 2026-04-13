@@ -6,6 +6,7 @@
 	const spec = $derived(content.gantt);
 	const weeks = $derived(spec?.weeks ?? 0);
 	const bars = $derived(spec?.bars ?? []);
+	const tbd = $derived(!!spec?.tbd);
 	const columnLabels = $derived(
 		spec?.columnLabels?.length === weeks && weeks > 0
 			? spec.columnLabels
@@ -30,7 +31,7 @@
 		</div>
 	{/if}
 
-	{#if spec && weeks > 0 && bars.length}
+	{#snippet ganttChartMarkup()}
 		<div class="gantt-wrap" style="--gantt-weeks: {weeks}">
 			<div class="gantt-grid-head" role="row">
 				<div class="gantt-corner" role="columnheader"></div>
@@ -69,6 +70,26 @@
 				</div>
 			{/each}
 		</div>
+	{/snippet}
+
+	{#if spec && weeks > 0 && bars.length}
+		{#if tbd}
+			<div
+				class="gantt-tbd-shell"
+				role="region"
+				aria-label="Schedule to be determined. The chart is illustrative only."
+			>
+				<div class="gantt-chart-blur" aria-hidden="true">
+					{@render ganttChartMarkup()}
+				</div>
+				<div class="gantt-tbd-aside">
+					<span class="gantt-tbd-label">TBD</span>
+					<span class="gantt-tbd-hint">Schedule not fixed</span>
+				</div>
+			</div>
+		{:else}
+			{@render ganttChartMarkup()}
+		{/if}
 	{:else}
 		<p class="gantt-empty">Add a <code>gantt</code> object to this slide in the deck JSON.</p>
 	{/if}
@@ -104,10 +125,68 @@
 		line-height: 1.5;
 	}
 
+	.gantt-tbd-shell {
+		display: flex;
+		flex-direction: row;
+		align-items: stretch;
+		gap: clamp(12px, 3vw, 28px);
+		padding: 12px max(12px, env(safe-area-inset-left)) 8px max(12px, env(safe-area-inset-right));
+		min-width: 0;
+	}
+
+	.gantt-chart-blur {
+		flex: 1;
+		min-width: 0;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		filter: blur(3.5px);
+		opacity: 0.78;
+		pointer-events: none;
+		user-select: none;
+	}
+
+	.gantt-tbd-aside {
+		flex: 0 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 6px;
+		padding: 8px 4px;
+		min-width: 4.5rem;
+		border-left: 1px solid var(--border);
+		align-self: center;
+	}
+
+	.gantt-tbd-label {
+		font-family: var(--font-mono);
+		font-size: clamp(1.75rem, 4vw, 2.75rem);
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		color: var(--black);
+		line-height: 1;
+	}
+
+	.gantt-tbd-hint {
+		font-size: 0.6875rem;
+		font-weight: 500;
+		color: var(--gray-500);
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		text-align: center;
+		max-width: 7rem;
+		line-height: 1.35;
+	}
+
 	.gantt-wrap {
 		padding: 16px max(12px, env(safe-area-inset-left)) 8px max(12px, env(safe-area-inset-right));
 		overflow-x: auto;
 		-webkit-overflow-scrolling: touch;
+	}
+
+	.gantt-tbd-shell .gantt-wrap {
+		padding-left: 0;
+		padding-right: 0;
 	}
 
 	.gantt-grid-head {
@@ -249,6 +328,26 @@
 	}
 
 	@media (max-width: 768px) {
+		.gantt-tbd-shell {
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		.gantt-tbd-aside {
+			flex-direction: row;
+			justify-content: flex-start;
+			border-left: none;
+			border-top: 1px solid var(--border);
+			padding: 12px 0 4px;
+			min-width: unset;
+			gap: 12px;
+		}
+
+		.gantt-tbd-hint {
+			text-align: left;
+			max-width: none;
+		}
+
 		.gantt-weeks {
 			min-width: 240px;
 		}
