@@ -30,11 +30,11 @@
 
 	{#if content.tableRows?.length}
 		<div class="dt-table-wrap">
-			<table>
+			<table class="dt-table-grid">
 				<thead>
 					<tr>
 						{#each columns as col}
-							<th>{col}</th>
+							<th scope="col">{col}</th>
 						{/each}
 					</tr>
 				</thead>
@@ -42,7 +42,7 @@
 					{#each content.tableRows as row}
 						<tr>
 							{#each columns as col}
-								<td>{row[col] ?? ''}</td>
+								<td data-label={col}>{row[col] ?? ''}</td>
 							{/each}
 						</tr>
 					{/each}
@@ -116,10 +116,22 @@
 		-webkit-overflow-scrolling: touch;
 	}
 
+	.dt-table-grid {
+		width: 100%;
+		table-layout: fixed;
+	}
+
 	.dt-table-wrap :global(th),
 	.dt-table-wrap :global(td) {
 		word-break: break-word;
 		overflow-wrap: anywhere;
+		vertical-align: top;
+		line-height: 1.45;
+	}
+
+	.dt-table-wrap :global(th:last-child),
+	.dt-table-wrap :global(td:last-child) {
+		font-variant-numeric: tabular-nums;
 	}
 
 	.dt-footer {
@@ -133,6 +145,68 @@
 	}
 
 	@media (max-width: 768px) {
+		.dt-header .slide-title {
+			font-size: clamp(1.125rem, 4.5vw, 1.5rem);
+			line-height: 1.2;
+		}
+
+		.dt-header .slide-subtitle {
+			font-size: 0.75rem;
+			line-height: 1.4;
+		}
+
+		.dt-table-wrap {
+			overflow-x: visible;
+			padding: 0 clamp(10px, 3vw, 24px);
+		}
+
+		/* Stack invoice rows as cards — avoids squeezed / stretched price cells */
+		.dt-table-grid :global(thead) {
+			display: none;
+		}
+
+		.dt-table-grid :global(tbody tr) {
+			display: block;
+			border: 1px solid var(--border);
+			border-radius: var(--radius-md);
+			margin-bottom: 12px;
+			padding: 12px 14px;
+			background: var(--white);
+		}
+
+		.dt-table-grid :global(tbody tr:last-child) {
+			margin-bottom: 0;
+		}
+
+		.dt-table-grid :global(tbody td) {
+			display: block;
+			width: 100%;
+			padding: 10px 0;
+			border-bottom: none;
+			line-height: 1.45;
+		}
+
+		.dt-table-grid :global(tbody td:not(:last-child)) {
+			border-bottom: 1px solid var(--border);
+			margin-bottom: 2px;
+		}
+
+		.dt-table-grid :global(tbody td::before) {
+			content: attr(data-label);
+			display: block;
+			font-size: 0.5625rem;
+			font-weight: 600;
+			letter-spacing: 0.07em;
+			text-transform: uppercase;
+			color: var(--gray-400);
+			margin-bottom: 6px;
+			line-height: 1.2;
+		}
+
+		.dt-footer .slide-body {
+			line-height: 1.55;
+		}
+
 		.kv-row {
 			flex-direction: column;
 			align-items: flex-start;
