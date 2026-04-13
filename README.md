@@ -37,3 +37,15 @@ Deploy `build/` to any static host (Netlify, Vercel, S3, etc.).
 ```sh
 npm run check
 ```
+
+## Push to GitHub
+
+Remote: `https://github.com/scissor-plug/pimmie-ovo-starstruck-deck.git`
+
+If **Push** fails in the editor (authentication, permission denied, or “failed to push”):
+
+1. Log in to GitHub CLI: `gh auth login`
+2. Point Git at the CLI for `github.com` credentials: `gh auth setup-git --hostname github.com`
+3. Commit any changes, then from this folder: `git push origin main`
+
+Only **committed** changes can be pushed. Use Terminal in the project root if the Source Control UI keeps failing after step 2.
