@@ -32,6 +32,8 @@ npm run preview
 
 Deploy `build/` to any static host (Netlify, Vercel, S3, etc.).
 
+**Railway (Railpack):** `railway.json` + `railpack.json` pin the build (`npm ci && npm run build`) and runtime (`serve` on `PORT`). Dependencies are listed under `dependencies` so production installs include Vite/SvelteKit.
+
 ## Typecheck
 
 ```sh
