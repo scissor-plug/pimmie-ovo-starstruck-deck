@@ -1,0 +1,222 @@
+{
+	"name": "PIMMIE · OVO / Starstruck — Website overhaul (development) · Initial proposal",
+	"type": "deck",
+	"slides": [
+		{
+			"position": 0,
+			"layout": "header-body",
+			"content": {
+				"title": "PIMMIE · OVO / Starstruck",
+				"subtitle": "Website overhaul · Creative direction + development proposal",
+				"body": "This deck outlines the application approach, timeline, and investment for a full-site overhaul aligned to PIMMIE’s official web presence and rollout with OVO / Starstruck — scoped as a $15,000 project fee for the agreed build.\n\nVisual direction can track the shared creative deck and label assets; staging and launch timing stay coordinated with management and release milestones."
+			}
+		},
+		{
+			"position": 1,
+			"layout": "grid-3",
+			"content": {
+				"title": "Brand system — web treatment",
+				"subtitle": "Lock-ups, type, and digital consistency",
+				"gridItems": [
+					{
+						"label": "Logos / lock-ups",
+						"value": "Use approved OVO / Starstruck and artist lock-ups consistently across the site; any web-specific variants confirmed during discovery with final brand files."
+					},
+					{
+						"label": "Typography",
+						"value": "Heading and body families follow label and campaign guidelines; exact cuts and tracking to be pulled from source Figma or design PDFs."
+					},
+					{
+						"label": "Color & imagery",
+						"value": "Hex/RGB from approved palettes; photography and cover art treated at high resolution with clear crops per breakpoint."
+					}
+				],
+				"body": "Confirm final swatches and export specs in Figma or source files wherever PDFs use raster-only swatches."
+			}
+		},
+		{
+			"position": 2,
+			"layout": "grid-3",
+			"content": {
+				"title": "Creative pillars — website experience",
+				"subtitle": "Motion, immersion, and artist world",
+				"gridItems": [
+					{
+						"label": "Motion-first",
+						"value": "Prioritize motion and depth over static grids where campaign assets support it — performance and reduced-motion fallbacks included."
+					},
+					{
+						"label": "Landing direction",
+						"value": "Hero and navigation patterns that feel cinematic and on-brand; mobile-first layout with clear CTAs to music and video."
+					},
+					{
+						"label": "Music & video",
+						"value": "Discography and video surfaces that highlight artwork and visuals — immersive browsing beyond a flat grid where it serves the story."
+					}
+				],
+				"body": "On-site playback or smartlink handoff can be tuned per track; embeds and third-party scripts stay lean for load time and consent."
+			}
+		},
+		{
+			"position": 3,
+			"layout": "split",
+			"content": {
+				"title": "Moodboard & consistency",
+				"subtitle": "Creative lift across digitals",
+				"body": "The site should align with PIMMIE’s current visual era — elevating existing assets with layout, motion, and typography rather than recycling generic templates.\n\nDigital type and campaign choices should stay cohesive with singles, videos, and cover art as they roll out.",
+				"gridItems": [
+					{
+						"label": "Exploration A",
+						"value": "Bold hero with layered motion or film-style treatment — subject to approved assets."
+					},
+					{
+						"label": "Exploration B",
+						"value": "Spatial, editorial layouts for music and video — scroll-driven reveals where appropriate."
+					}
+				]
+			}
+		},
+		{
+			"position": 4,
+			"layout": "header-body",
+			"content": {
+				"title": "Recommended application stack",
+				"subtitle": "Grounded in modern static sites — final choices confirmed in discovery",
+				"body": "A fast SvelteKit frontend keeps one codebase for the overhaul, with static or edge hosting and optional headless content if the team needs frequent updates without deploys.",
+				"gridItems": [
+					{
+						"label": "Content",
+						"value": "Structured data in-repo or a headless CMS if editorial workflow warrants it — scoped in discovery."
+					},
+					{
+						"label": "Frontend",
+						"value": "SvelteKit + Vite — SSR/SSG, progressive enhancement for embeds and reduced-motion preferences."
+					},
+					{
+						"label": "Delivery",
+						"value": "Staging + production on static or edge hosting (e.g. Cloudflare Pages); Git handoff at milestones."
+					}
+				]
+			}
+		},
+		{
+			"position": 5,
+			"layout": "gantt",
+			"content": {
+				"title": "Timeline",
+				"subtitle": "Indicative schedule from kickoff — exact dates TBD with label milestones",
+				"gantt": {
+					"weeks": 6,
+					"columnLabels": ["1", "2", "3", "4", "5", "6"],
+					"bars": [
+						{
+							"label": "Discovery",
+							"start": 1,
+							"span": 2,
+							"tone": "neutral"
+						},
+						{
+							"label": "Design & motion spec",
+							"start": 2,
+							"span": 2,
+							"tone": "blue"
+						},
+						{
+							"label": "Build",
+							"start": 4,
+							"span": 2,
+							"tone": "green"
+						},
+						{
+							"label": "QA & launch prep",
+							"start": 6,
+							"span": 1,
+							"tone": "amber"
+						}
+					]
+				},
+				"body": "Each column is one calendar week from kickoff. Parallel tracks: creative approval vs. engineering integration. Milestone dates to be set with OVO / Starstruck / management."
+			}
+		},
+		{
+			"position": 6,
+			"layout": "split",
+			"content": {
+				"title": "Discovery — outcomes to confirm",
+				"subtitle": "Before locking build scope and launch timing",
+				"body": "Use this checklist in workshops so motion, IA, and rollout gates match what ships.",
+				"gridItems": [
+					{
+						"label": "Hero & motion",
+						"value": "Hero treatment — asset format, loop length, performance budget, and reduced-motion fallback."
+					},
+					{
+						"label": "Music & video IA",
+						"value": "Discography and video layouts; on-site player vs. outbound links; grid vs. immersive patterns per breakpoint."
+					},
+					{
+						"label": "CMS vs. Git",
+						"value": "Who updates copy and artwork post-launch; whether editorial needs warrant a headless CMS vs. structured repo updates."
+					},
+					{
+						"label": "Rollout gate",
+						"value": "What ships in staging vs. public; comms checklist with label."
+					},
+					{
+						"label": "Analytics & embeds",
+						"value": "Smartlinks, mailing list, and third-party scripts — consent and performance."
+					}
+				]
+			}
+		},
+		{
+			"position": 7,
+			"layout": "data-table",
+			"content": {
+				"title": "Investment — $15,000",
+				"subtitle": "Project fee (USD) for discovery, build, editor handoff, QA, and go-live — one headline number for the agreed scope, no separate line for editor vs. development",
+				"tableRows": [
+					{
+						"Engagement": "Website overhaul",
+						"What's covered": "Discovery and alignment; SvelteKit implementation (hero, inner pages, music/video); content editor or agreed update path from kickoff; QA; staging and production deploy; launch through go-live for scope locked with this deck",
+						"Project fee": "$15,000"
+					},
+					{
+						"Engagement": "Net-new scope after kickoff",
+						"What's covered": "Extra pages/features, large CMS expansion, or work outside what we lock at kickoff — scoped before build",
+						"Project fee": "Quoted separately"
+					},
+					{
+						"Engagement": "Ongoing maintenance",
+						"What's covered": "Optional monthly retainer after launch — updates, monitoring, small fixes as agreed",
+						"Project fee": "$300* / usage based"
+					}
+				],
+				"body": "The $15,000 figure is the full project fee for the agreed PIMMIE scope (build + editor path + deploy), not a partial estimate with mandatory add-ons. Anything beyond that scope is written up and quoted before work."
+			}
+		},
+		{
+			"position": 8,
+			"layout": "split",
+			"content": {
+				"title": "Scope highlights",
+				"subtitle": "What this engagement delivers when aligned to this deck",
+				"body": "Immersive home and inner pages that reflect PIMMIE’s current visual era; motion-aware storytelling with accessible fallbacks; discography and video surfaces that feel premium on mobile and desktop; integration with smartlinks and embeds as scoped; staging for label review before launch — covered by the $15,000 project fee when aligned to this deck.",
+				"gridItems": [
+					{
+						"label": "Configuration",
+						"value": "Clear split between design-approved tokens (type, color, motion) and implementation in code."
+					},
+					{
+						"label": "Empty states",
+						"value": "Graceful handling when promo assets are staged for later announcement."
+					},
+					{
+						"label": "Handoff",
+						"value": "Repository access, deploy notes, and README or CMS handoff depending on content model."
+					}
+				]
+			}
+		}
+	]
+}
