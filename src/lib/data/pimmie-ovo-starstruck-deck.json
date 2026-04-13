@@ -1,5 +1,5 @@
 {
-	"name": "PIMMIE · OVO / Starstruck — Website overhaul (development) · Initial proposal",
+	"name": "PIMMIE · OVO / Starstruck — Website overhaul (development) · Invoice",
 	"type": "deck",
 	"slides": [
 		{
@@ -7,8 +7,8 @@
 			"layout": "header-body",
 			"content": {
 				"title": "PIMMIE · OVO / Starstruck",
-				"subtitle": "Website overhaul · Creative direction + development proposal",
-				"body": "This deck outlines the application approach, timeline, and investment for a full-site overhaul aligned to PIMMIE’s official web presence and rollout with OVO / Starstruck — scoped as a $15,000 project fee for the agreed build.\n\nVisual direction can track the shared creative deck and label assets; staging and launch timing stay coordinated with management and release milestones."
+				"subtitle": "Website overhaul · Creative direction + development (invoice)",
+				"body": "This document is the client-facing invoice and scope record for work on PIMMIE’s official web presence with OVO / Starstruck — application approach and investment, without a fixed delivery timeline in this deck.\n\nPayment is due for work already completed ($1,500). We can add the content editor for an additional $1,000.\n\nVisual direction can track the shared creative deck and label assets; staging and launch timing stay coordinated with management and release milestones."
 			}
 		},
 		{
@@ -101,45 +101,6 @@
 		},
 		{
 			"position": 5,
-			"layout": "gantt",
-			"content": {
-				"title": "Timeline",
-				"subtitle": "Indicative schedule from kickoff — exact dates TBD with label milestones",
-				"gantt": {
-					"weeks": 6,
-					"columnLabels": ["1", "2", "3", "4", "5", "6"],
-					"bars": [
-						{
-							"label": "Discovery",
-							"start": 1,
-							"span": 2,
-							"tone": "neutral"
-						},
-						{
-							"label": "Design & motion spec",
-							"start": 2,
-							"span": 2,
-							"tone": "blue"
-						},
-						{
-							"label": "Build",
-							"start": 4,
-							"span": 2,
-							"tone": "green"
-						},
-						{
-							"label": "QA & launch prep",
-							"start": 6,
-							"span": 1,
-							"tone": "amber"
-						}
-					]
-				},
-				"body": "Each column is one calendar week from kickoff. Parallel tracks: creative approval vs. engineering integration. Milestone dates to be set with OVO / Starstruck / management."
-			}
-		},
-		{
-			"position": 6,
 			"layout": "split",
 			"content": {
 				"title": "Discovery — outcomes to confirm",
@@ -170,20 +131,25 @@
 			}
 		},
 		{
-			"position": 7,
+			"position": 6,
 			"layout": "data-table",
 			"content": {
-				"title": "Investment — $15,000",
-				"subtitle": "Project fee (USD) for discovery, build, editor handoff, QA, and go-live — one headline number for the agreed scope, no separate line for editor vs. development",
+				"title": "Investment & payment",
+				"subtitle": "Invoice for work completed; optional content editor add-on",
 				"tableRows": [
 					{
-						"Engagement": "Website overhaul",
-						"What's covered": "Discovery and alignment; SvelteKit implementation (hero, inner pages, music/video); content editor or agreed update path from kickoff; QA; staging and production deploy; launch through go-live for scope locked with this deck",
-						"Project fee": "$15,000"
+						"Engagement": "Pimmie site — work completed to date",
+						"What's covered": "Development and delivery completed so far under the agreed engagement — per statement of work / invoice",
+						"Project fee": "$1,500"
+					},
+					{
+						"Engagement": "Content editor (optional add-on)",
+						"What's covered": "Editor interface so the team can update copy and media without deploys — scoped and wired to the build",
+						"Project fee": "+$1,000"
 					},
 					{
 						"Engagement": "Net-new scope after kickoff",
-						"What's covered": "Extra pages/features, large CMS expansion, or work outside what we lock at kickoff — scoped before build",
+						"What's covered": "Extra pages/features, large CMS expansion, or work outside what we lock — scoped before build",
 						"Project fee": "Quoted separately"
 					},
 					{
@@ -192,16 +158,16 @@
 						"Project fee": "$300* / usage based"
 					}
 				],
-				"body": "The $15,000 figure is the full project fee for the agreed PIMMIE scope (build + editor path + deploy), not a partial estimate with mandatory add-ons. Anything beyond that scope is written up and quoted before work."
+				"body": "The base invoice is $1,500 for work already done. If you want the content editor, we’ll add it for $1,000 on top of that. Anything else outside the locked scope is quoted before we start."
 			}
 		},
 		{
-			"position": 8,
+			"position": 7,
 			"layout": "split",
 			"content": {
 				"title": "Scope highlights",
-				"subtitle": "What this engagement delivers when aligned to this deck",
-				"body": "Immersive home and inner pages that reflect PIMMIE’s current visual era; motion-aware storytelling with accessible fallbacks; discography and video surfaces that feel premium on mobile and desktop; integration with smartlinks and embeds as scoped; staging for label review before launch — covered by the $15,000 project fee when aligned to this deck.",
+				"subtitle": "What this engagement covers when aligned to this invoice",
+				"body": "Immersive home and inner pages that reflect PIMMIE’s current visual era; motion-aware storytelling with accessible fallbacks; discography and video surfaces that feel premium on mobile and desktop; integration with smartlinks and embeds as scoped; staging for label review before launch — aligned to the engagement and payment terms here (content editor available as the optional +$1,000 add-on).",
 				"gridItems": [
 					{
 						"label": "Configuration",

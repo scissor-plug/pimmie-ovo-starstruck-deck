@@ -25,6 +25,8 @@ export type GanttSpec = {
 	weeks: number;
 	columnLabels?: string[];
 	bars: GanttBar[];
+	/** When true, chart is shown blurred with a TBD label (schedule not fixed). */
+	tbd?: boolean;
 };
 
 export type SlideContent = {
