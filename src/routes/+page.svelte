@@ -55,7 +55,7 @@
 	<meta name="author" content="Scissor Studio" />
 	<meta
 		name="description"
-		content="PIMMIE · OVO / Starstruck — website overhaul invoice: $1,500 for work completed; optional content editor +$1,000. No committed timeline in this deck."
+		content="PIMMIE · OVO / Starstruck — website overhaul invoice: $1,000 for work completed; optional content editor +$1,000. No committed timeline in this deck."
 	/>
 </svelte:head>
 
